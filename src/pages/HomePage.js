@@ -1,0 +1,13 @@
+
+
+import "./HomePage.css"
+
+function HomePage() {
+    return <>
+        {/* <div>Home Page
+        <button type="button" className="btn btn-primary">Primary</button>
+        </div> */}
+    </>
+}
+
+export default HomePage;

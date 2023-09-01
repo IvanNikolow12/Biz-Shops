@@ -19,7 +19,7 @@
 }
 
 .home-page-content {
-    background-color: orange;
+    /* background-color: orange; */
     max-width: 1424px;
     min-width: 300px;
     height: max-content;
@@ -86,4 +86,37 @@
 
 .home-page-last-card-button:hover {
     box-shadow: 0 0 5px red;
+}
+
+
+/*/////////////////////////////////////////////////////   homepage new products section*/
+
+.home-page-new-products-section {
+    margin-top: 20px;
+    max-width: 1424px;
+    height: 600px;
+    /* background-color: orange; */
+}
+
+.home-page-new-products-header {
+    background-color: rgb(240, 197, 197);
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.home-page-new-products-section hr {
+    height: 5px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    background-color: brown;
+}
+
+.new-products-img {
+    max-height: 340px;
 }

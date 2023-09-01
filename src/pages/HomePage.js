@@ -126,6 +126,122 @@ function HomePage() {
                     </div>
                 </div>
             </section>
+            <section className="home-page-new-products-section">
+                <div className="home-page-new-products-header">Нови</div>
+                <hr/>
+                <div className="home-page-new-products">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="https://www.eschuhe.ch/fr/media/catalog/product/cache/image/650x650/0/0/0000208825573_08_pl.jpg" class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <h5 class="card-title">Under Armour HOVR Dragon</h5>
+                                <p class="card-text">Price: 254лв</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="https://www.americangolf.co.uk/dw/image/v2/AAKY_PRD/on/demandware.static/-/Sites-master-catalog/default/dw508a21ed/images-square/zoom/415944-Black-Black-Grey-Under-Armour-Mens-Charged-Phantom-Spikeless-Golf-Shoes-1.jpg?sw=635" class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <h5 class="card-title">Under Armour DrumX</h5>
+                                <p class="card-text">Цена: 230лв</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="https://www.tradeinn.com/f/13941/139418805/under-armour-charged-bandit-tr-2-trail-running-shoes.jpg" class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <h5 class="card-title">Under Armour Charged</h5>
+                                <p class="card-text">Цена: 260лв</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://img.eobuwie.cloud/eob_product_656w_656h(2/5/f/7/25f7366970a938722414cb8f543fcb9a1d6fb367_0000207324602_04_rz.jpg,jpg)/chaussures-under-armour-ua-hovr-rise-2-3023009-001-blk.jpg" class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR</h5>
+                                    <p class="card-text">Цена: 200лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://www.tradeinn.com/f/13893/138935811/nike-swim-bikini-toppi-scoop-multi-logo.jpg" class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://www.innovasport.com/medias/top-under-armour-mid-padless-is-1373865-100-1.jpg?context=bWFzdGVyfGltYWdlc3w2MjU5MXxpbWFnZS9qcGVnfGltYWdlcy9oN2EvaDZiLzExNDk2MTQwODY1NTY2LmpwZ3xlNDM0ZWMxYTc1ZDMzYzJmNmZjZjliNzdhOWFkY2E3NmE5YmQxYjkyNWJhYTI2MzNiMzg1ODY0ODMxYjdjOTZh" class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dw25d67365/images/36944001/Rebel_36944001_black_hi-res.jpg?sw=1000&sh=1000&sm=fit&q=70" class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://thumblr.uniid.it/product/193279/4f5b95b11a61.jpg" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dwee1c17d6/images/66375001/Rebel_66375001_black_hi-res.jpg?sw=750&sh=750&sm=fit&q=60" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://lb.mikesport.com/cdn/shop/products/IN118064_c5108d63-b224-44d4-b4ca-35cef8b6d819.jpeg?v=1639914619" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://5.imimg.com/data5/CP/EB/VD/SELLER-18827386/puma-men-s-no-show-bamboo-socks-3-pack.png" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://static.footshop.com/img/p/6/5/0/7/7/3/650773.jpg" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Under Armour HOVR:X</h5>
+                                    <p class="card-text">Цена: 210лв</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </>
 }

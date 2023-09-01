@@ -1,0 +1,17 @@
+.product-nav {
+    background-color: rgb(48, 47, 47);
+}
+
+.product-genre {
+    color: white;
+    padding: 0 15px;
+}
+
+.white {
+    color: black;
+    background-color: white;
+}
+
+.ladies-shoes {
+    width: 300px;
+}

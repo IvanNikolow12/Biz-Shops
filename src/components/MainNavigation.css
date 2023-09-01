@@ -47,3 +47,7 @@
     width: 300px;
     padding: 5px 20px;
 }
+
+.hiden {
+    visibility: hidden;
+}

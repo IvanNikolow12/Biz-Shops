@@ -1,5 +1,6 @@
 
 
+import Footer from "../components/Footer";
 import "./HomePage.css"
 
 function HomePage() {
@@ -243,6 +244,7 @@ function HomePage() {
                 </div>
             </section>
         </section>
+        
     </>
 }
 

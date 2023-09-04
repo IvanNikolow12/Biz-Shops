@@ -4,6 +4,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import HomeRoot from './pages/HomeRoot';
 import ErrorPage from './pages/ErrorPage';
+import DetailsPage from './pages/DetailsPage';
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage/>
+      },
+      {
+        path: ':id',
+        element: <DetailsPage/>
       }
     ]
   }

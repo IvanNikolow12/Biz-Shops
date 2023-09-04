@@ -97,6 +97,11 @@
     /* background-color: orange; */
 }
 
+.row-cols-md-4 a {
+    text-decoration: none;
+    color: black;
+}
+
 .home-page-new-products-header {
     background-color: rgb(240, 197, 197);
     display: inline-block;

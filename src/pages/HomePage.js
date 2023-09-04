@@ -132,6 +132,7 @@ function HomePage() {
                 <hr/>
                 <div className="home-page-new-products">
                     <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <a href="Under-Armour-HOVR-Dragon">
                         <div class="col">
                             <div class="card h-100">
                             <img src="https://www.eschuhe.ch/fr/media/catalog/product/cache/image/650x650/0/0/0000208825573_08_pl.jpg" class="card-img-top" alt="..."/>
@@ -141,6 +142,7 @@ function HomePage() {
                             </div>
                             </div>
                         </div>
+                        </a>
                         <div class="col">
                             <div class="card h-100">
                             <img src="https://www.americangolf.co.uk/dw/image/v2/AAKY_PRD/on/demandware.static/-/Sites-master-catalog/default/dw508a21ed/images-square/zoom/415944-Black-Black-Grey-Under-Armour-Mens-Charged-Phantom-Spikeless-Golf-Shoes-1.jpg?sw=635" class="card-img-top" alt="..."/>

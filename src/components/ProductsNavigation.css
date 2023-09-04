@@ -15,3 +15,7 @@
 .ladies-shoes {
     width: 300px;
 }
+    /*///////////////////////////////////////////////////////////      this is for production navigation, see the others links...*/
+.dropdown-menu a {
+    text-decoration: none;
+}

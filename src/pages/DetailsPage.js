@@ -1,4 +1,4 @@
-import {FiMinus, FiPlus} from 'react-icons/fi'
+import {FiMinus, FiPlus, FiHeart} from 'react-icons/fi'
 import './DetailsPage.css'
 
 function DetailsPage() {
@@ -39,7 +39,10 @@ function DetailsPage() {
                 </div>
                 <div className="col-12 col-md-6">
                     <h1 className="details-page-product-title">Under Armour HOVR Dragon</h1>
-                    <h4 className="details-page-product-price">189,99 лв.</h4>
+                    <div className="details-page-product-price">
+                        <h6 className='details-page-old-price'>209,99 лв.</h6>
+                        <h4 className='details-page-new-price'>179,99 лв.</h4>
+                    </div>
                     <hr/>
                     <p className="details-page-product-short-description">Мъжките Under Armour HOVR Dragon омекотяват всяка Ваша стъпка благодарение на пяната в междинната подметка.
                         Леката текстилна горна част осигурява вентилация и опора на стъпалото,
@@ -48,14 +51,14 @@ function DetailsPage() {
                     <p className="details-page-product-number">АРТИКУЛЕН НОМЕР: 200000350453</p>
                     <hr/>
                     <div className="panel-body">
-                        <div className="details-page-product-color-section">
+                        {/* <div className="details-page-product-color-section">
                             <h6>Избери цвят</h6>
                             <div className="details-page-product-color-container">
                                 <button data-color="DC3727"></button>
                                 <button data-color="DC3728"></button>
                                 <button data-color="DC3729"></button>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="details-page-product-size-section">
                             <h6>Избери размер</h6>
                             <div className="details-page-product-size-container">
@@ -83,6 +86,7 @@ function DetailsPage() {
                         </div>
                         <div className='mobile-purchase-section'>ДОБАВИ В КОЛИЧКАТА</div>
                     </div>
+                    <div className='add-to-favorite'><FiHeart/> Добави в Любими</div>
                 </div>
                 <div className="col-12 product-info-section">
                     <div className='product-info-header'>Информация за продукта</div>

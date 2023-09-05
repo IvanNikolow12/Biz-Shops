@@ -1,0 +1,36 @@
+.panel {
+    margin: 20px 0;
+}
+
+.panel-title {
+    margin-left: 20px;
+}
+
+.panel-body {
+    margin: 10px 0 0 20px;
+    padding: 10px;
+    background-color: rgb(239, 237, 237);
+}
+
+
+.list-unstyled li {
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+.list-unstyled li a {
+    text-decoration: none;
+    color: black;
+}
+
+.list-unstyled li a:hover {
+    color: rgb(245, 161, 161);
+}
+
+.filter-title {
+    margin: 5px 0 10px 10px;
+}
+
+.form-check {
+    margin-left: 20px;
+}

@@ -4,40 +4,40 @@ import './DetailsPage.css'
 function DetailsPage() {
     return <>
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <ol className="breadcrumb">
+                <li className="breadcrumb-item"><a href="/">Home</a></li>
+                <li className="breadcrumb-item"><a href="/">Library</a></li>
+                <li className="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
         </nav>
         <div className="container-fluid container-lg">
-            <div class="row">
-                <div class="col-12 col-md-6">
+            <div className="row">
+                <div className="col-12 col-md-6">
                     <div className="ajaxProductGalery">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            <img src="https://www.eschuhe.ch/fr/media/catalog/product/cache/image/650x650/0/0/0000208825573_08_pl.jpg" class="d-block w-100" alt="..."/>
+                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                            <img src="https://www.eschuhe.ch/fr/media/catalog/product/cache/image/650x650/0/0/0000208825573_08_pl.jpg" className="d-block w-100" alt="..."/>
                             </div>
-                            <div class="carousel-item">
-                            <img src="https://www.americangolf.co.uk/dw/image/v2/AAKY_PRD/on/demandware.static/-/Sites-master-catalog/default/dw508a21ed/images-square/zoom/415944-Black-Black-Grey-Under-Armour-Mens-Charged-Phantom-Spikeless-Golf-Shoes-1.jpg?sw=635" class="d-block w-100" alt="..."/>
+                            <div className="carousel-item">
+                            <img src="https://www.americangolf.co.uk/dw/image/v2/AAKY_PRD/on/demandware.static/-/Sites-master-catalog/default/dw508a21ed/images-square/zoom/415944-Black-Black-Grey-Under-Armour-Mens-Charged-Phantom-Spikeless-Golf-Shoes-1.jpg?sw=635" className="d-block w-100" alt="..."/>
                             </div>
-                            <div class="carousel-item">
-                            <img src="https://www.tradeinn.com/f/13941/139418805/under-armour-charged-bandit-tr-2-trail-running-shoes.jpg   " class="d-block w-100" alt="..."/>
+                            <div className="carousel-item">
+                            <img src="https://www.tradeinn.com/f/13941/139418805/under-armour-charged-bandit-tr-2-trail-running-shoes.jpg   " className="d-block w-100" alt="..."/>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
                         </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div className="col-12 col-md-6">
                     <h1 className="details-page-product-title">Under Armour HOVR Dragon</h1>
                     <h4 className="details-page-product-price">189,99 лв.</h4>
                     <hr/>
@@ -73,7 +73,7 @@ function DetailsPage() {
                     <div className='product-purchase-section'>
                         <div className='form-group has-icons'>
                             <label for="product-quantity">Количество</label>
-                            <input id='product-quantity' className='form-control text-center' type='number' min="1" value="1"/>
+                            <input id='product-quantity' className='form-control text-center quantity-input' type='number' min="1" defaultValue="1"/>
                             <button className='btn left' data-handler="subQuantity" type='button'>
                                 <FiMinus size={25}/>
                             </button>
@@ -84,7 +84,19 @@ function DetailsPage() {
                         <div className='mobile-purchase-section'>ДОБАВИ В КОЛИЧКАТА</div>
                     </div>
                 </div>
-                <div class="col-12">.col-6<br/>Subsequent columns continue along the new line.</div>
+                <div className="col-12 product-info-section">
+                    <div className='product-info-header'>Информация за продукта</div>
+                    <hr/>
+                    <ul className='product-info-content'>
+                        <li>Нисък профил за по-голяма свобода на движенията</li>
+                        <li>Лека текстилна горна част, която осигурява дишаемост</li>
+                        <li>Подсилени при петата за повече подкрепа и защита</li>
+                        <li>Междинна подметка от мека пяна за стабилност и мекота при движение</li>
+                        <li>Омекотяваща стелка</li>
+                        <li>Мека текстилна подплата</li>
+                        <li>Гъвкава релефна подметка, осигуряваща добро сцепление с настилката</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </>

@@ -10,6 +10,9 @@ import MensPage from './pages/MensPage';
 import ChildrensPage from './pages/ChildrensPage';
 import DiscountPage from './pages/DiscountPage';
 import AccessoriesPage from './pages/AccessoriesPage';
+import NewProductPage from './pages/NewProductPage';
+import EditProductPage from './pages/EditProductPage';
+import { action as AddOrEditProduct } from './components/ProductForm'
 
 
 const router = createBrowserRouter([
@@ -28,24 +31,38 @@ const router = createBrowserRouter([
         element: <DetailsPage/>
       },
       {
-        path: 'ladies',
-        element: <LadiesPage/>
+        path: 'catalog',
+        children: [
+          {
+            path: 'ladies',
+            element: <LadiesPage/>
+          },
+          {
+            path: 'mens',
+            element: <MensPage/>
+          },
+          {
+            path: 'children',
+            element: <ChildrensPage/>
+          },
+          {
+            path: 'discount',
+            element: <DiscountPage/>
+          },
+          {
+            path: 'accessories',
+            element: <AccessoriesPage/>
+          }
+        ]
       },
       {
-        path: 'mens',
-        element: <MensPage/>
+        path: 'new-product',
+        element: <NewProductPage/>,
+        action: AddOrEditProduct
       },
       {
-        path: 'children',
-        element: <ChildrensPage/>
-      },
-      {
-        path: 'discount',
-        element: <DiscountPage/>
-      },
-      {
-        path: 'accessories',
-        element: <AccessoriesPage/>
+        path: 'edit-product',
+        element: <EditProductPage/>
       }
     ]
   }

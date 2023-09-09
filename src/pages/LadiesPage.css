@@ -1,9 +1,24 @@
+.breadcrumb-item a {
+    text-decoration: none;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check-label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
 .panel {
     margin: 20px 0;
 }
 
 .panel-title {
     margin-left: 20px;
+    padding-top: 10px;
 }
 
 .panel-body {
@@ -33,4 +48,32 @@
 
 .form-check {
     margin-left: 20px;
+}
+
+/*////////////////////////////////////////////////    right side catalog*/
+
+.catalog-header {
+    /* position: relative; */
+    height: 200px;
+}
+
+.page-title {
+    margin-top: 20px;
+}
+
+.sorting-container {
+    height: min-content;
+    width: 100%;
+    position: relative;
+}
+
+
+.list-sorting {
+    float: right;
+}
+
+.form-group {
+    display: flex;
+    width: 280px;
+    justify-content: space-between;
 }

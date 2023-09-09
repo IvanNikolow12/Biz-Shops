@@ -18,12 +18,12 @@ function ProductsNavigation() {
     return<>
         <ul className="nav justify-content-center product-nav">
                 <li className="nav-item">
-                    <NavLink className="nav-link profile-nav product-genre" to="/ladies">Дамски обувки</NavLink>
+                    <NavLink className="nav-link profile-nav product-genre" to="/catalog/ladies">Жени</NavLink>
                 </li>
             <li className="nav-item">
-                <NavLink className="nav-link profile-nav product-genre" to="/mens">Мъжки обувки</NavLink></li>
+                <NavLink className="nav-link profile-nav product-genre" to="/catalog/mens">Мъже</NavLink></li>
             <li className="nav-item dropdown">
-                <NavLink className="nav-link profile-nav product-genre" to="/children">Детски обувки</NavLink>
+                <NavLink className="nav-link profile-nav product-genre" to="/catalog/children">Деца</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link product-genre" to="/discount">Намаление</NavLink>

@@ -53,12 +53,28 @@
 /*////////////////////////////////////////////////    right side catalog*/
 
 .catalog-header {
-    /* position: relative; */
+    position: relative;
     height: 200px;
 }
 
 .page-title {
     margin-top: 20px;
+    /* display: inline-block; */
+}
+
+.add-product-icon {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    transition: all, .2s ease-in-out;
+    color: black;
+}
+
+.add-product-icon:hover {
+    /* box-shadow: 0 0 5px black; */
+    color: rgb(117, 161, 215);
+    transform: scale(1.1);
 }
 
 .sorting-container {
@@ -76,4 +92,12 @@
     display: flex;
     width: 280px;
     justify-content: space-between;
+}
+
+.catalog-product-col {
+    height: 400px;
+}
+
+.catalog-product-image {
+    height: 300px;
 }

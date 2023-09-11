@@ -18,18 +18,18 @@ function ProductsNavigation() {
     return<>
         <ul className="nav justify-content-center product-nav">
                 <li className="nav-item">
-                    <NavLink className="nav-link profile-nav product-genre" to="/catalog/ladies">Жени</NavLink>
+                    <a className="nav-link profile-nav product-genre" href="/catalog/ladies">Жени</a>
                 </li>
             <li className="nav-item">
-                <NavLink className="nav-link profile-nav product-genre" to="/catalog/mens">Мъже</NavLink></li>
+                <a className="nav-link profile-nav product-genre" href="/catalog/mens">Мъже</a></li>
             <li className="nav-item dropdown">
-                <NavLink className="nav-link profile-nav product-genre" to="/catalog/children">Деца</NavLink>
+                <a className="nav-link profile-nav product-genre" href="/catalog/children">Деца</a>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link product-genre" to="/discount">Намаление</NavLink>
+                <a className="nav-link product-genre" href="/discount">Намаление</a>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link product-genre" to="/accessories">Аксесоари</NavLink>
+                <a className="nav-link product-genre" href="/accessories">Аксесоари</a>
             </li>
         </ul>
     </>

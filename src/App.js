@@ -4,8 +4,8 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import HomeRoot from './pages/HomeRoot';
 import ErrorPage from './pages/ErrorPage';
-import DetailsPage from './pages/DetailsPage';
-import LadiesPage from './pages/LadiesPage';
+import DetailsPage, { loader as ProductDetailsLader} from './pages/DetailsPage';
+import LadiesPage, { loader as LadiesPageLoader } from './pages/LadiesPage';
 import MensPage from './pages/MensPage';
 import ChildrensPage from './pages/ChildrensPage';
 import DiscountPage from './pages/DiscountPage';
@@ -28,14 +28,25 @@ const router = createBrowserRouter([
       },
       {
         path: ':id',
-        element: <DetailsPage/>
+        id: 'product-details',
+        element: <DetailsPage/>,
+        // loader: ProductDetailsLader
       },
       {
         path: 'catalog',
         children: [
           {
             path: 'ladies',
-            element: <LadiesPage/>
+            element: <LadiesPage/>,
+            loader: LadiesPageLoader,
+            children: [
+              // {
+              //   path: ':id',
+              //   id: 'catalog-product-details',
+              //   element: <DetailsPage/>,
+              //   loader: ProductDetailsLader, //////////////////////////////////////////////////////////      GREDAAAAA
+              // }
+            ]
           },
           {
             path: 'mens',

@@ -1,8 +1,15 @@
 
-import { NavLink } from 'react-router-dom';
+import { FaPlusSquare } from 'react-icons/fa'
+import { NavLink, json, useLoaderData } from 'react-router-dom';
 import './LadiesPage.css'
+import { useState } from 'react';
 
 function LadiesPage() {
+    const [pathData, setPathData] = useState('')
+
+    const data = useLoaderData();
+    // console.log(data)
+
     return <>
     <div className="container-fluid">
     <nav aria-label="breadcrumb">
@@ -40,41 +47,41 @@ function LadiesPage() {
                             <h5 className='filter-title'>Размер</h5>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">XS</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">XS</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">S</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">S</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">M</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">M</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">L</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">L</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">XL</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">XL</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">XXL</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">XXL</label>
                             </div>
                             <hr/>
                             <h5 className='filter-title'>Цена</h5>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">50лв. - 100лв.</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">50лв. - 100лв.</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">100лв. - 200лв.</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">100лв. - 200лв.</label>
                             </div>
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label className="form-check-label" for="flexRadioDefault1">200лв. - 300лв.</label>
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">200лв. - 300лв.</label>
                             </div>
                         </nav>
                     </div>
@@ -84,6 +91,7 @@ function LadiesPage() {
                 <header className='catalog-header'>
                     <h1 className='page-title'>Жени - Марки</h1>
                     <span className='page-result-count text-gray text-sm'> 1520 продукта</span>
+                    <NavLink to="/new-product"><FaPlusSquare className='add-product-icon' size={40}/></NavLink>
                     <hr/>
                     <div className='sorting-container'>
                         <div className='list-sorting'>
@@ -108,19 +116,19 @@ function LadiesPage() {
                         </div>
                     </div>
                 </header>
-                <div className="row row-cols-4 row-cols-md-4 g-4">
-                        <a href="/Under-Armour-HOVR-Dragon">
-                        <div className="col">
+                <div className="row row-cols-4 row-cols-md-4 g-4"> 
+                    {data && Object.entries(data.shoes).map(shoes => <NavLink to={`/${shoes[0]}`} key={shoes[0]} state={{data: Object.assign(shoes[1], {id: shoes[0]})}}>
+                        <div className="col catalog-product-col" key={shoes[0]}>
                             <div className="card h-100">
-                            <img src="https://www.eschuhe.ch/fr/media/catalog/product/cache/image/650x650/0/0/0000208825573_08_pl.jpg" className="card-img-top" alt="..."/>
+                            <img src={shoes[1].productImages.imageOne} className="card-img-top catalog-product-image" alt="product"/>
                             <div className="card-body">
-                                <h5 className="card-title">Under Armour HOVR Dragon</h5>
-                                <p className="card-text">Price: 254лв</p>
+                                <h5 className="card-title">{shoes[1].name}</h5>
+                                <p className="card-text">Цена: {shoes[1].newPrice}лв.</p>
                             </div>
                             </div>
                         </div>
-                        </a>
-                        <div className="col">
+                        </NavLink>)}
+                        {/* <div className="col">
                             <div className="card h-100">
                             <img src="https://www.americangolf.co.uk/dw/image/v2/AAKY_PRD/on/demandware.static/-/Sites-master-catalog/default/dw508a21ed/images-square/zoom/415944-Black-Black-Grey-Under-Armour-Mens-Charged-Phantom-Spikeless-Golf-Shoes-1.jpg?sw=635" className="card-img-top" alt="..."/>
                             <div className="card-body">
@@ -218,7 +226,7 @@ function LadiesPage() {
                                     <p className="card-text">Цена: 210лв</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                 </div>
             </section>
         </div>
@@ -227,3 +235,20 @@ function LadiesPage() {
 }
 
 export default LadiesPage;
+
+export async function loader({request, params}) {
+    const fullUrl = window.location.href;
+    const FETCH_PATH = fullUrl.split('/')[4]
+
+    let url = `https://biz-shops-default-rtdb.europe-west1.firebasedatabase.app/catalog/${FETCH_PATH}.json`
+
+    const response = await fetch(url);
+
+    if(!response.ok) {
+        throw json({message: 'Cloud not fetch data'}, {status: 500})
+    } else {
+        return response;
+    }
+
+
+}

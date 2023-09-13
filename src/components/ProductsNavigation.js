@@ -2,19 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 import './ProductsNavigation.css'
 
-
-// const jqueryFun = () => { 
-//     $('.product-genre').on('mouseenter', function() {
-//     console.log('hi');
-//     $(this).addClass('white')
-//     $('.product-genre').on('mouseout', function() {
-//         $(this).removeClass('white')
-//     })
-// })
-// }
-
 function ProductsNavigation() {
-    // jqueryFun()
     return<>
         <ul className="nav justify-content-center product-nav">
                 <li className="nav-item">
@@ -23,13 +11,13 @@ function ProductsNavigation() {
             <li className="nav-item">
                 <a className="nav-link profile-nav product-genre" href="/catalog/mens">Мъже</a></li>
             <li className="nav-item dropdown">
-                <a className="nav-link profile-nav product-genre" href="/catalog/children">Деца</a>
+                <a className="nav-link profile-nav product-genre" href="/catalog/childrens">Деца</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link product-genre" href="/discount">Намаление</a>
+                <a className="nav-link product-genre" href="/catalog/discount">Намаление</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link product-genre" href="/accessories">Аксесоари</a>
+                <a className="nav-link product-genre" href="/catalog/accessories">Аксесоари</a>
             </li>
         </ul>
     </>

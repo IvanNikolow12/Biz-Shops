@@ -129,7 +129,7 @@ function HomePage() {
                 <div className="home-page-new-products-header">Нови</div>
                 <hr/>
                 <div className="home-page-new-products">
-                <div className="row row-cols-4 row-cols-md-4 g-4">
+                <div className="row row-cols-1 row-cols-md-4 g-4">
                         <a href="Under-Armour-HOVR-Dragon">
                         <div className="col">
                             <div className="card h-100 product-card">

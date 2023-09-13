@@ -49,7 +49,7 @@ function ProductForm({method}) {
                             <option value="Пол">Пол</option>
                             <option value="mens">Мъже</option>
                             <option value="ladies">Жени</option>
-                            <option value="childer">Деца</option>
+                            <option value="childrens">Деца</option>
                         </select>
                     </div>
                     <div className="check-category">
@@ -94,9 +94,9 @@ function ProductForm({method}) {
                     <strong htmlFor="product-image-Url" className="form-label">Снимка на продукта</strong>
                     <input type="url" className="form-control" id="product-product-image1" name='image1' placeholder="URL..." required/>
                     <hr/>
-                    <input type="url" className="form-control" id="product-product-image2" name='image2' placeholder="URL..." required/>
+                    <input type="url" className="form-control" id="product-product-image2" name='image2' placeholder="URL..."/>
                     <hr/>
-                    <input type="url" className="form-control" id="product-product-image3" name='image3' placeholder="URL..." required/>
+                    <input type="url" className="form-control" id="product-product-image3" name='image3' placeholder="URL..."/>
                 </div>
                 <button type='submit'  className="form-btn form-submit-btn">Save</button>
                 <button type='button' className="form-btn form-cancel-btn" onClick={cancelHandler}>Cancel</button>

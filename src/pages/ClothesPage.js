@@ -1,68 +1,37 @@
+import { useLocation } from 'react-router-dom';
 
 import { FaPlusSquare } from 'react-icons/fa'
-import { NavLink, json, useLoaderData } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './LadiesPage.css'
-import { useEffect, useState } from 'react';
 
-function MensPage() {
-    let [listOfData, setListOfData] = useState([]);
-    const [productCounter, setProductCounter] = useState(0);
-    const [headerTitle, setHeaderTitle] = useState('');
+function ClothesPage() {
+    const location = useLocation();
+    const productData = location.state?.data;
 
-    const data = useLoaderData();
-
-    function clothesFilterHandler() {
-        setListOfData(data.clothes);
-        setProductCounter(Object.keys(data.clothes).length)
-        setHeaderTitle('- Облекло')
-    }
-
-    function shoesFilterHandler() {
-        setListOfData(data.shoes);
-        setProductCounter(Object.keys(data.shoes).length);
-        setHeaderTitle('- Обувки');
-    }
-
-    function accessoiresFilterHandler() {
-        setListOfData(data.accessoires);
-        setProductCounter(Object.keys(data.accessoires).length);
-        setHeaderTitle('- Аксесоари');
-    }
-
-    let unOrderedData = {};
-    if (listOfData.length === 0) {
-        Object.assign(listOfData, data.shoes, data.clothes || '', data.accessoires || '');  
-        unOrderedData = Object.entries(listOfData).sort((a, b) => a[1].articulNumber - b[1].articulNumber);
-        
-    }
-    useEffect(() => {
-        setProductCounter(unOrderedData.length)
-        // setHeaderTitle('Всичко');
-    }, [])
-
-    listOfData = Object.entries(listOfData).sort((a, b) => a[1].articulNumber - b[1].articulNumber);
+    console.log(productData)
 
     return <>
+    ajsbfsgafjhsabfjsbhafshabfjh
     <div className="container-fluid">
-        <nav aria-label="breadcrumb history-bar">
-                <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="/">Начало</a></li>
-                    <li className="breadcrumb-item"><a href="/">Мъже</a></li>
-                    <li className="breadcrumb-item active" aria-current="page">Data</li>
-                </ol>
+    <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+                <li className="breadcrumb-item"><a href="/">Начало</a></li>
+                <li className="breadcrumb-item"><a href="/">Жени</a></li>
+                <li className="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
         </nav>
-        <div className="row ajaxContainer">
+        <div className="row ajaxContainer" data-url="/ladies">
             <aside className="col-12 col-lg-3 col-xxlg-2">
                 <section className="panel categories-panes">
                     <h2 className="h3 panel-title">Категории</h2>
                     <div className="panel-body">
-                        <nav className="sidebar-nav">
+                        {/* <nav className="sidebar-nav">
                             <ul className="list-unstyled">
-                                <li><button type='submit' onClick={clothesFilterHandler} state={{data: data}}>Облекло ({data && Object.entries(data.clothes).length})</button></li>
-                                <li><button type='submit' onClick={shoesFilterHandler} state={{data: data}}>Обувки ({data && Object.entries(data.shoes).length})</button></li>
-                                <li><button type='submit' onClick={accessoiresFilterHandler}>Аксесоари ({data && Object.entries(data.accessoires).length})</button></li>
+                                <li><NavLink to="clothes" >Облекло ({Object.entries(data.clothes).length})</NavLink></li>
+                                <li><NavLink to="shoes" state={{data: data.shoes, id: data.shoes}}>Обувки ({Object.entries(data.shoes).length})</NavLink></li>
+                                <li><NavLink to="accessoires">Аксесоари (94)</NavLink></li>
                             </ul>
-                        </nav>
+                        </nav> */}
                     </div>
                 </section>
                 <section className='panel panel-white filters-panel'>
@@ -121,8 +90,8 @@ function MensPage() {
             </aside>
             <section className="col-12 col-lg-9 col-xxlg-2">
                 <header className='catalog-header'>
-                    <h1 className='page-title'>Мъже {headerTitle}</h1>
-                    <span className='page-result-count text-gray text-sm'> {productCounter} продукта</span>
+                    <h1 className='page-title'>Жени - Облекло</h1>
+                    <span className='page-result-count text-gray text-sm'> 1520 продукта</span>
                     <NavLink to="/new-product"><FaPlusSquare className='add-product-icon' size={40}/></NavLink>
                     <hr/>
                     <div className='sorting-container'>
@@ -148,29 +117,18 @@ function MensPage() {
                         </div>
                     </div>
                 </header>
-                <div className="row row-cols-1 row-cols-md-4 g-4"> 
-                    {listOfData && listOfData.map(item => <NavLink to={`/${item[0]}`} key={item[0]} state={{data: Object.assign(item[1], {id: item[0]})}}>
-                        <div className="col h-100" key={item[0]}>
-                            <div className="card">
-                            <img src={item[1].productImages.imageOne} className="card-img-top catalog-product-image" alt="product"/>
+                <div className="row row-cols-4 row-cols-md-4 g-4"> 
+                    {productData && Object.entries(productData).map(clothes => <NavLink to={`/${clothes[0]}`} key={clothes[0]} state={{data: Object.assign(clothes[1], {id: clothes[0]})}}>
+                        <div className="col catalog-product-col" key={clothes[0]}>
+                            <div className="card h-100">
+                            <img src={clothes[1].productImages.imageOne} className="card-img-top catalog-product-image" alt="product"/>
                             <div className="card-body">
-                                <h5 className="card-title">{item[1].name}</h5>
-                                <p className="card-text">Цена: {item[1].newPrice}лв.</p>
+                                <h5 className="card-title">{clothes[1].name}</h5>
+                                <p className="card-text">Цена: {clothes[1].newPrice}лв.</p>
                             </div>
                             </div>
                         </div>
-                    </NavLink>)}
-                    {/* {unOrderedData && unOrderedData.map(item => <NavLink to={`/${item[0]}`} key={item[0]} state={{data: Object.assign(item[1], {id: item[0]})}}>
-                        <div className="col h-100" key={item[0]}>
-                            <div className="card">
-                            <img src={item[1].productImages.imageOne} className="card-img-top catalog-product-image" alt="product"/>
-                            <div className="card-body">
-                                <h5 className="card-title">{item[1].name}</h5>
-                                <p className="card-text">Цена: {item[1].newPrice}лв.</p>
-                            </div>
-                            </div>
-                        </div>
-                    </NavLink>)} */}
+                        </NavLink>)}
                 </div>
             </section>
         </div>
@@ -178,19 +136,4 @@ function MensPage() {
     </>
 }
 
-export default MensPage;
-
-export async function loader({request, params}) {
-    const fullUrl = window.location.href;
-    const FETCH_PATH = fullUrl.split('/')[4];              ///////////////////////   LADIES / MENS / CHILDRENS
-
-    let url = `https://biz-shops-default-rtdb.europe-west1.firebasedatabase.app/catalog/${FETCH_PATH}.json`
-
-    const response = await fetch(url);
-
-    if(!response.ok) {
-        throw json({message: 'Cloud not fetch data'}, {status: 500})
-    } else {
-        return response;
-    }
-}
+export default ClothesPage;

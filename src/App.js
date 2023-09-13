@@ -6,13 +6,14 @@ import HomeRoot from './pages/HomeRoot';
 import ErrorPage from './pages/ErrorPage';
 import DetailsPage, { loader as ProductDetailsLader} from './pages/DetailsPage';
 import LadiesPage, { loader as LadiesPageLoader } from './pages/LadiesPage';
-import MensPage from './pages/MensPage';
-import ChildrensPage from './pages/ChildrensPage';
+import MensPage, { loader as MensPageLoader} from './pages/MensPage';
+import ChildrensPage, { loader as ChildrensPageLoader} from './pages/ChildrensPage';
 import DiscountPage from './pages/DiscountPage';
-import AccessoriesPage from './pages/AccessoriesPage';
+import AccessoriesPage, { loader as AccessoiresPageLoader} from './pages/AccessoriesPage';
 import NewProductPage from './pages/NewProductPage';
 import EditProductPage from './pages/EditProductPage';
 import { action as AddOrEditProduct } from './components/ProductForm'
+import ClothesPage from './pages/ClothesPage';
 
 
 const router = createBrowserRouter([
@@ -39,22 +40,22 @@ const router = createBrowserRouter([
             path: 'ladies',
             element: <LadiesPage/>,
             loader: LadiesPageLoader,
-            children: [
-              // {
-              //   path: ':id',
-              //   id: 'catalog-product-details',
-              //   element: <DetailsPage/>,
-              //   loader: ProductDetailsLader, //////////////////////////////////////////////////////////      GREDAAAAA
-              // }
-            ]
+            // children: [
+            //   {
+            //     path: 'clothes',
+            //     element: <ClothesPage/> ///////////////// GREDA
+            //   }
+            // ]
           },
           {
             path: 'mens',
-            element: <MensPage/>
+            element: <MensPage/>,
+            loader: MensPageLoader
           },
           {
-            path: 'children',
-            element: <ChildrensPage/>
+            path: 'childrens',
+            element: <ChildrensPage/>,
+            loader: ChildrensPageLoader
           },
           {
             path: 'discount',
@@ -62,7 +63,8 @@ const router = createBrowserRouter([
           },
           {
             path: 'accessories',
-            element: <AccessoriesPage/>
+            element: <AccessoriesPage/>,
+            loader: AccessoiresPageLoader
           }
         ]
       },

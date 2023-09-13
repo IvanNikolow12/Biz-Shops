@@ -22,7 +22,7 @@
 }
 
 .panel-body {
-    margin: 10px 0 0 20px;
+    margin: 10px 20px 0 20px;
     padding: 10px;
     background-color: rgb(239, 237, 237);
 }
@@ -33,12 +33,12 @@
     font-size: 20px;
 }
 
-.list-unstyled li a {
-    text-decoration: none;
+.list-unstyled li button {
+    border: none;
     color: black;
 }
 
-.list-unstyled li a:hover {
+.list-unstyled li button:hover {
     color: rgb(245, 161, 161);
 }
 
@@ -94,10 +94,14 @@
     justify-content: space-between;
 }
 
-.catalog-product-col {
-    height: 400px;
+/* .row a:hover {
+    border: 1px solid rgba(4, 4, 4, 0.552);
+} */
+
+/* .catalog-product-col {
+    max-height: 450px;
 }
 
 .catalog-product-image {
-    height: 300px;
-}
+    max-height: 350px;
+} */

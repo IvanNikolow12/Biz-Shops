@@ -30,12 +30,12 @@ function DetailsPage() {
                             <div className="carousel-item active">
                             <img src={productData.productImages.imageOne} className="d-block w-100" alt="..."/>
                             </div>
-                            <div className="carousel-item">
+                            {productData.productImages.imageTwo && <div className="carousel-item">
                             <img src={productData.productImages.imageTwo} className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="carousel-item">
+                            </div>}
+                            {productData.productImages.imageThree && <div className="carousel-item">
                             <img src={productData.productImages.imageThree} className="d-block w-100" alt="..."/>
-                            </div>
+                            </div>}
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,7 +51,7 @@ function DetailsPage() {
                 <div className="col-12 col-md-6">
                     <h1 className="details-page-product-title">{productData.name}</h1>
                     <div className="details-page-product-price">
-                        <h6 className='details-page-old-price'>{productData.oldPrice} лв.</h6>
+                        <h6 className='details-page-old-price'>{productData.oldPrice} {productData.oldPrice ? 'лв.' : ''}</h6>
                         <h4 className='details-page-new-price'>{productData.newPrice} лв.</h4>
                     </div>
                     <hr/>

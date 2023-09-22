@@ -57,8 +57,8 @@ function ChildrensPage() {
                     <div className="panel-body">
                         <nav className="sidebar-nav">
                             <ul className="list-unstyled">
-                                <li><button type='submit' onClick={clothesFilterHandler} state={{data: data}}>Облекло ({data && Object.entries(data.clothes).length})</button></li>
-                                <li><button type='submit' onClick={shoesFilterHandler} state={{data: data}}>Обувки ({data && Object.entries(data.shoes).length})</button></li>
+                                <li><button type='submit' onClick={clothesFilterHandler} state={{data: data}}>Облекло ({data.clothes ? Object.entries(data.clothes).length : 0})</button></li>
+                                <li><button type='submit' onClick={shoesFilterHandler} state={{data: data}}>Обувки ({data.shoes ? Object.entries(data.shoes).length : 0})</button></li>
                                 <li><button type='submit' onClick={accessoiresFilterHandler}>Аксесоари ({data.accessoires ? Object.entries(data.accessoires).length : 0})</button></li>
                             </ul>
                         </nav>

@@ -1,6 +1,7 @@
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import {FiMinus, FiPlus, FiHeart} from 'react-icons/fi'
+import { RiEditFill } from 'react-icons/ri';
 import './DetailsPage.css'
 import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ function DetailsPage() {
 
     const location = useLocation();
     const productData = location.state?.data;
+    // console.log(productData)
 
     return <>
         <nav aria-label="breadcrumb">
@@ -96,6 +98,7 @@ function DetailsPage() {
                         {productData.longDescription.split('/ ').map(row => <li key={row}>{row}</li>)}
                         
                     </ul>
+                    <NavLink to={`/edit-product`} state={{data: productData}}><RiEditFill size={40}/></NavLink>
                 </div>
             </div>
         </div>
@@ -107,6 +110,7 @@ export default DetailsPage;
 
 
 ///////////////////////////////// WITHOUT LOADER !!!
+///////////////////////////////// THE DATA IS TAKEN FROM STATE IN LOCATION !!!
 
 // export async function loader({request, params}) {
 //     const fullURL = window.location.href;

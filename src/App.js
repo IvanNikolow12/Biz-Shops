@@ -31,7 +31,6 @@ const router = createBrowserRouter([
         path: ':id',
         id: 'product-details',
         element: <DetailsPage/>,
-        // loader: ProductDetailsLader
       },
       {
         path: 'catalog',
@@ -40,12 +39,6 @@ const router = createBrowserRouter([
             path: 'ladies',
             element: <LadiesPage/>,
             loader: LadiesPageLoader,
-            // children: [
-            //   {
-            //     path: 'clothes',
-            //     element: <ClothesPage/> ///////////////// GREDA
-            //   }
-            // ]
           },
           {
             path: 'mens',
@@ -75,7 +68,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'edit-product',
-        element: <EditProductPage/>
+        element: <EditProductPage/>,
+        action: AddOrEditProduct
       }
     ]
   }

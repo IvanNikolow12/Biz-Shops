@@ -18,6 +18,10 @@
     margin-bottom: 30px;
 }
 
+.product-id {
+    visibility: hidden;
+}
+
 .check-genre {
     width: 300px;
 }

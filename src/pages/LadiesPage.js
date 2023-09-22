@@ -7,6 +7,7 @@ import './LadiesPage.css'
 
 function LadiesPage() {
     let [listOfData, setListOfData] = useState([]);
+    let [brandFilterList, setBrandFilterList] = useState([]);
     const [productCounter, setProductCounter] = useState(0);
     const [headerTitle, setHeaderTitle] = useState('');
 
@@ -30,6 +31,32 @@ function LadiesPage() {
         setHeaderTitle('- Аксесоари')
     }
 
+    function brandFilterHandler(e) {
+        ///////////////////////////////////////////////////////  ПОЧТИ ГОТОВ ФИЛТЪР.... НО ИСКА НЕЩО ДРУГО.
+        let brandFilter = [];
+        e.preventDefault()
+        const brand = e.target.textContent.split(' (')[0];
+        // console.log(brand)
+        Object.values(listOfData).forEach(item => {
+            if(item[1].brand === brand) {
+                console.log('hi')
+                brandFilter.push(item)
+            }
+        })
+        console.log(brandFilter)
+        // setBrandFilterList(...brandFilter)
+
+
+        // unOrderedData.forEach(item => {
+        //     if(item[1].brand === brand) {
+        //         brandFilter.push(item)
+        //     }
+        // })
+        // console.log(brandFilter)
+        // setListOfData(...brandFilter)
+        // console.log(listOfData)
+    }
+    
     let unOrderedData = {};
     if (listOfData.length === 0) {
         Object.assign(listOfData, data.shoes, data.clothes || '', data.accessoires || '');  
@@ -41,6 +68,7 @@ function LadiesPage() {
 
     listOfData = Object.entries(listOfData).sort((a, b) => a[1].articulNumber - b[1].articulNumber);
 
+    
 
     return <>
     <div className="container-fluid">
@@ -58,8 +86,8 @@ function LadiesPage() {
                     <div className="panel-body">
                         <nav className="sidebar-nav">
                         <ul className="list-unstyled">
-                                <li><button type='submit' onClick={clothesFilterHandler} state={{data: data}}>Облекло ({data && Object.entries(data.clothes).length})</button></li>
-                                <li><button type='submit' onClick={shoesFilterHandler} state={{data: data}}>Обувки ({data && Object.entries(data.shoes).length})</button></li>
+                                <li><button type='submit' onClick={clothesFilterHandler} >Облекло ({data.clothes ? Object.entries(data.clothes).length : 0})</button></li>
+                                <li><button type='submit' onClick={shoesFilterHandler} >Обувки ({data.shoes ? Object.entries(data.shoes).length : 0})</button></li>
                                 <li><button type='submit' onClick={accessoiresFilterHandler}>Аксесоари ({data.accessoires ? Object.entries(data.accessoires).length : 0})</button></li>
                             </ul>
                         </nav>
@@ -70,10 +98,10 @@ function LadiesPage() {
                     <div className="panel-body">
                         <nav className="sidebar-nav">
                             <h5 className='filter-title'>Марки</h5>
-                            <ul className="list-unstyled">
-                                <li><a href="obleklo">Adidas (124)</a></li>
-                                <li><a href="obleklo">Nike (240)</a></li>
-                                <li><a href="obleklo">Under Armour (94)</a></li>
+                            <ul className="list-unstyled" onClick={brandFilterHandler}>
+                                <li><button type='submit'>Adidas (124)</button></li>
+                                <li><button type='submit'>Nike (240)</button></li>
+                                <li><button type='submit'>Under Armour (94)</button></li>
                             </ul>
                             <hr/>
                             <h5 className='filter-title'>Размер</h5>

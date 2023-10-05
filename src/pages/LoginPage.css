@@ -1,0 +1,27 @@
+.login-page-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* #tab-register {
+    background-color: blue;
+} */
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item-li {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 5px 15px;
+}
+
+.button-check {
+    background-color: #ffc107;
+}

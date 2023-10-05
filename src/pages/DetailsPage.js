@@ -3,13 +3,25 @@ import { NavLink, useLocation } from 'react-router-dom';
 import {FiMinus, FiPlus, FiHeart} from 'react-icons/fi'
 import { RiEditFill } from 'react-icons/ri';
 import './DetailsPage.css'
-import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+// import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
 
 function DetailsPage() {
+    let [quantityCounter, setQuantityCounter] = useState(1)
 
     const location = useLocation();
     const productData = location.state?.data;
     // console.log(productData)
+
+        function decrementCounterHandler() {
+            if(quantityCounter === 1) {
+                return
+            }
+            setQuantityCounter(quantityCounter -= 1)
+        }
+        function incrementCounterHandler() {
+            setQuantityCounter(quantityCounter += 1)
+        }
 
     return <>
         <nav aria-label="breadcrumb">
@@ -79,11 +91,13 @@ function DetailsPage() {
                     <div className='product-purchase-section'>
                         <div className='form-group has-icons'>
                             {/* <label htmlFor="product-quantity">Количество</label> */}
-                            <input id='product-quantity' className='form-control text-center details-page-quantity-input' type='number' min="1" defaultValue="1"/>
-                            <button className='btn left' data-handler="subQuantity" type='button'>
+                            <input id='product-quantity' 
+                                    className='form-control text-center details-page-quantity-input' 
+                                    value={quantityCounter} readOnly/>
+                            <button onClick={decrementCounterHandler} className='btn-minus quantity' data-handler="subQuantity" type='button'>
                                 <FiMinus size={25}/>
                             </button>
-                            <button className='btn right' data-handler="addQuantity" type='button'>
+                            <button onClick={incrementCounterHandler} className='btn-plus quantity' data-handler="addQuantity" type='button'>
                                 <FiPlus size={25}/>
                             </button>
                         </div>

@@ -76,21 +76,28 @@
     -moz-appearance: textfield;
 } */
 
-.left {
+.btn-minus {
+    background-color: transparent;
+    border: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.left:active {
-    border: 0 0 2px black;
+.btn-minus:hover {
+    color: red;
 }
 
-.right {
+.btn-plus {
+    background-color: transparent;
+    border: none;
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+}
+.btn-plus:hover {
+    color: rgb(8, 149, 22);
 }
 
 .mobile-purchase-section {

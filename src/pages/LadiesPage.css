@@ -14,11 +14,20 @@
 
 .panel {
     margin: 20px 0;
+    position: relative;
 }
 
 .panel-title {
     margin-left: 20px;
     padding-top: 10px;
+}
+
+.filter-arrow {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
 }
 
 .panel-body {

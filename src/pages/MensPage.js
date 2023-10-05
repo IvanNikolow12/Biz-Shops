@@ -10,6 +10,7 @@ function MensPage() {
     const [headerTitle, setHeaderTitle] = useState('');
 
     const data = useLoaderData();
+    console.log(data)
 
     function clothesFilterHandler() {
         setListOfData(data.clothes);
@@ -58,8 +59,8 @@ function MensPage() {
                     <div className="panel-body">
                         <nav className="sidebar-nav">
                             <ul className="list-unstyled">
-                                <li><button type='submit' onClick={clothesFilterHandler} state={{data: data}}>Облекло ({data && Object.entries(data.clothes).length})</button></li>
-                                <li><button type='submit' onClick={shoesFilterHandler} state={{data: data}}>Обувки ({data && Object.entries(data.shoes).length})</button></li>
+                                <li><button type='submit' onClick={clothesFilterHandler} >Облекло ({data && Object.entries(data.clothes).length})</button></li>
+                                <li><button type='submit' onClick={shoesFilterHandler} >Обувки ({data && Object.entries(data.shoes).length})</button></li>
                                 <li><button type='submit' onClick={accessoiresFilterHandler}>Аксесоари ({data && Object.entries(data.accessoires).length})</button></li>
                             </ul>
                         </nav>

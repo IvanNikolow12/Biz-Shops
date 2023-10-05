@@ -14,6 +14,7 @@ import NewProductPage from './pages/NewProductPage';
 import EditProductPage from './pages/EditProductPage';
 import { action as AddOrEditProduct } from './components/ProductForm'
 import ClothesPage from './pages/ClothesPage';
+import LoginPage, { action as AuthAction } from './pages/LoginPage';
 
 
 const router = createBrowserRouter([
@@ -70,6 +71,11 @@ const router = createBrowserRouter([
         path: 'edit-product',
         element: <EditProductPage/>,
         action: AddOrEditProduct
+      },
+      {
+        path: 'auth',
+        element: <LoginPage/>,
+        action: AuthAction
       }
     ]
   }

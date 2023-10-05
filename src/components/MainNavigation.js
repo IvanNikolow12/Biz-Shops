@@ -5,8 +5,8 @@ import {AiFillHeart} from 'react-icons/ai'
 import {FaShoppingCart, FaUserAlt} from 'react-icons/fa';
 import {ImLocation} from 'react-icons/im'
 
-import './MainNavigation.css'
 import ProductsNavigation from './ProductsNavigation';
+import './MainNavigation.css'
 
 
 function MainNavigation() {
@@ -15,7 +15,7 @@ function MainNavigation() {
     return <>
         <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">Biz-Shop</a>
+                <NavLink className="navbar-brand" to="/">Biz-Shop</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -43,12 +43,12 @@ function MainNavigation() {
                                 <button className="btn btn-dark">Влез</button>
                             </div>
                             <hr/>
-                            <a href='/register' className='main-navigation-register-link'>Искам да се регистрирам</a>
+                            <NavLink to='/auth?mode=register' className='main-navigation-register-link'>Искам да се регистрирам</NavLink>
                         </form>
                     </ul>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" href="/favourites"><AiFillHeart className='main-navigation-heart' size={25}/>Любими</NavLink>
+                    <NavLink className="nav-link" to="/favourites"><AiFillHeart className='main-navigation-heart' size={25}/>Любими</NavLink>
                     </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
